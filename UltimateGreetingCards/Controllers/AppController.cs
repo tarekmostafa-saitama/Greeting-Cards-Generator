@@ -22,8 +22,8 @@ namespace UltimateGreetingCards.Controllers
             _unitOfWork = unitOfWork;
             _hostEnvironment = hostEnvironment;
         }
-        [Route("Categories/{catUrl}")]
-        [Route("Categories")]
+        [Route("{catUrl}")]
+        [Route("~/")]
         public IActionResult Categories(string catUrl)
         {
             if (string.IsNullOrEmpty(catUrl))
