@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "البطاقة";
+}
+
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+
+        <div class="content-body">
+            <!-- Description -->
+            <section id="description" class="card">
+                <div class="card-header">
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="row">
+                            
+                            <form asp-action="Card" asp-controller="App" method="post">
+                                <div class="form-group">
+                                    <label for="name" class="control-label">اسم الشخص</label>
+                                    <input type="text" class="form-control" id="name" name="name">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">تحميل بطاقة التهنئة</button>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!--/ Description -->
+
+
+        </div>
+    </div>
+</div>
+

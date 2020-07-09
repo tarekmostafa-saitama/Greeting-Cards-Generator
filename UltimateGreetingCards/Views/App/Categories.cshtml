@@ -1,0 +1,44 @@
+﻿@model IEnumerable<UltimateGreetingCards.Core.DbEntities.Card>
+@{
+    ViewData["Title"] = "قائمة البطاقات";
+}
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+          
+            <div class="content-body">
+                <!-- Description -->
+                <section id="description" class="card">
+                    <div class="card-header">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="row">
+                                @if (!Model.Any())
+                                {
+                                    <h1 class="text-danger text-center">لا يوجد كروت فى هذا القسم.</h1>
+                                }
+                                @foreach (var card in Model)
+                                {
+                                    <div class="card align-items-center" style="width: 20rem;">
+                                        <img class="card-img-top" src="/cards/@card.ImagePath" alt="Card image cap">
+                
+                                      <br/>
+                                        <h4>
+                                            <a asp-controller="App" asp-action="Card" asp-route-cardUrl="@card.Url" class="card-link">اختيار البطاقة</a>
+                                        </h4>
+                                    </div>
+                                }
+             
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!--/ Description -->
+
+
+            </div>
+        </div>
+    </div>
+
