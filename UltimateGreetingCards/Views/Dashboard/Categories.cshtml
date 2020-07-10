@@ -162,7 +162,7 @@
                     event.preventDefault();
                     var $temp = $("<input>");
                     $("body").append($temp);
-                    $temp.val(`${window.location.origin}/Category/${event.target.getAttribute('attr-url')}`).select();
+                    $temp.val(`${window.location.origin}/${event.target.getAttribute('attr-url')}`).select();
                     document.execCommand("copy");
                     $temp.remove();
                 }
